@@ -5,86 +5,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AllLab</title>
+    <title>Lab 06</title>
     <style>
-        *{
-            border:1px black solid;
-
+        * {
+            border: 1px black solid;
         }
-        table{
-        border: 1; 
-        width: 80%;
-        border-style: dotted;
-        border-width: thick;
-        border-color: tomato;
-        border-radius: 10px;
+        
+        table {
+            border: 1;
+            width: 80%;
+            border-style: dotted;
+            border-width: thick;
+            border-color: tomato;
+            border-radius: 10px;
         }
-
-        caption{
-        font-family: 'Noto Sans TC', sans-serif;
-        font-size:30px;color:rgba(8, 70, 54, 0.87);
+        
+        caption {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            color: rgba(8, 70, 54, 0.87);
         }
-
-        .th{
-        background-color: rgba(8, 70, 54, 0.87);
-        color:rgba(190, 219, 21, 0.986);
-            }
-
-        tr td:first-child{
-        background-color:rgba(8, 70, 54, 0.87);
-        color:rgba(190, 219, 21, 0.986);
+        
+        .th {
+            background-color: rgba(8, 70, 54, 0.87);
+            color: rgba(190, 219, 21, 0.986);
         }
-
-        .tb{
-        background-color: rgba(243, 133, 8, 0.932);
-        color:rgba(255, 255, 255, 0.986);
+        
+        tr td:first-child {
+            background-color: rgba(8, 70, 54, 0.87);
+            color: rgba(190, 219, 21, 0.986);
         }
+        
+        .tb {
+            background-color: rgba(243, 133, 8, 0.932);
+            color: rgba(255, 255, 255, 0.986);
+        }
+        
         .tb:hover {
-        background-color: rgb(255, 196, 0);
-        text-align: center;
-        color: rgb(152, 61, 175);
-        font-weight: bold;
-        text-transform: uppercase;
+            background-color: rgb(255, 196, 0);
+            text-align: center;
+            color: rgb(152, 61, 175);
+            font-weight: bold;
+            text-transform: uppercase;
         }
+        
         #H:hover {
-        background-color: rgb(255, 196, 0);
-        color: rgb(152, 61, 175);
+            background-color: rgb(255, 196, 0);
+            color: rgb(152, 61, 175);
         }
-
-        body{
+        
+        body {
             min-height: 100vh;
-            margin:0;
+            margin: 0;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto 1fr 100px;
-            
+            grid-template-rows: 100px 1fr 100px;
         }
-        header{
+        
+        header {
             grid-column: 1/-1;
-
-        }
-        .main{
-            display: grid;
-            
-
-        }
-        aside{
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: x-large;
             
         }
-        table{
-            
+        
+        aside {
+            background-color: rgb(187, 177, 177);
+            color: white;
+            text-align: center;
+            font-size: large;
         }
-        footer{
+        
+        div {
+            background-color: grey;
+            align-content: center;
+            justify-content: center;
+        }
+        
+        footer {
             grid-column: 1/-1;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: x-large;
         }
-
     </style>
 </head>
 
 <body>
-    <header>header</header>
-    <div class="main">
-        <aside>aside</aside>
+    <header>2021 TABLE</header>
+    <aside>
+        This is a sentence,it means nothing.Just to look like something here.<br>
+        This is a sentence,it means nothing.Just to look like something here.<br>
+        This is a sentence,it means nothing.Just to look like something here.<br>
+        This is a sentence,it means nothing.Just to look like something here.<br>
+        This is a sentence,it means nothing.Just to look like something here.<br>
+        This is a sentence,it means nothing.Just to look like something here.<br>
+        This is a sentence,it means nothing.Just to look like something here.<br>
+        This is a sentence,it means nothing.Just to look like something here.<br>
+        This is a sentence,it means nothing.Just to look like something here.<br>
+        This is a sentence,it means nothing.Just to look like something here.<br>
+    </aside>
+    <div>
         <table border="1">
             <caption id="H">課表</caption>
             <thead>
@@ -152,13 +176,14 @@
                 </tr>
                 <tr class="th">
                     <td>16:10</td>
-                    <td colspan="5" align="center" >耶下課囉</td>
+                    <td colspan="5" align="center">耶下課囉</td>
                 </tr>
 
             </tbody>
         </table>
     </div>
-    
+
+
     <footer>footer</footer>
 
 </body>
