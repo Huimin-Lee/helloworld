@@ -6,10 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AllLab</title>
+    <style>
+        *{
+            border:1px black solid;
+
+        }
+        body{
+            min-height: 100vh;
+            margin:0;
+            display: grid;
+            grid-auto-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr 100px;
+            
+        }
+        header{
+            grid-column: 1/-1;
+
+        }
+        aside{
+            grid-column: 1/2;
+        }
+        table{
+            grid-column: 2/3;
+        }
+        footer{
+            grid-column: 1/-1;
+        }
+
+    </style>
 </head>
 
 <body>
-
+    <header>header</header>
+    <aside>aside</aside>
     <table border="1" ; width="50%" ;>
         <thead>
             <tr style="text-align: left;">
@@ -38,6 +67,7 @@
             <td><a href="Lab_04/index.html">Lab 04</a></td>
         </tr>
     </table>
+    <footer>footer</footer>
 
 </body>
 

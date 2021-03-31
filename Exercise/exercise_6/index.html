@@ -1,74 +1,60 @@
 <!DOCTYPE html>
-<html lang="zh-hant-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exercise_6</title>
+    <title>Document</title>
+    <style>
+        *{
+            border:1px solid black;
+            
+        }
+        body{
+            
+            min-height: 100vh;
+            margin:0;
+            display:flex;
+            
+            
+        }
+        .content{
+            
+            display:flex;
+            flex-direction: row;
+            flex-grow:1;
+        }
+        aside{
+            flex-grow:1;
+            
+        }
+        main{
+            flex-grow:2;
+
+        }
+    </style>
 </head>
-<style>
-    *{
-        border: 1px solid
-    }
-    body{
-        min-height: 100vh;
-        margin:0;
-        display:flex;
-        flex-direction: column;
-    }
-
-    .content{
-        display:flex;
-        flex-direction: row;
-
-    }
-    main{
-        flex-grow: 2;
-    }
-    aside{
-        flex-grow: 1;
-    }
-
-    footer{
-        min-height:100px;
-    }
-    /* .box{
-        display:flex;
-        flex-direction:row;
-        flex-wrap: nowrap;
-        justify-content:space-evenly;
-        align-items: center; 垂直對齊 */
-
-    }
-    
-</style>
 <body>
-    <header>head</header>
     <div class="content">
-    
-        <main>main</main>
-        <aside>aside</aside>
+        <aside>
+            <h1>LEE<br>HUIMIN</h1>
+                <ul>
+                    <li>Call</li>
+                    <li>Mail</li>
+                    <li>Web</li>
+                    <li>Home</li>
+                    <li>FB</li>
+                </ul>
+        </aside>
+        <main>
+            <section>
+                 <h2>Experience</h2>
+                    <div></div>
+                
+
+            </section>
+            
+        </main>
     </div>
-    <footer>footer</footer>
-
-
-
-
-
-
-
-
-
-
-    <!-- <div class="box">
-        <div>
-            hello
-        </div>
-        <div style="order:-1;">world</div>      全部order預設為0,-1在這裡就為最小
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-    </div> -->
 </body>
 </html>
