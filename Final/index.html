@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,49 +9,177 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
     <title>FoodBee</title>
     <style>
+        * {
+            font-family: 'Rubik', sans-serif;
+        }
         
-        body{
-            
-            background-image: url('res4.jpg');
+        body {
+            background-image: url('1.jpg');
             background-repeat: no-repeat;
             background-size: cover;
-         
         }
-        .pic{
-            
-            content:url('rec.png');
-            width: 50%;
-            height:80%;
-            position: absolute;
-            bottom: 30px;
-            right:0px;
-        }
-        .nav{
-            position: absolute;
-            top: 10px;
-        }
-        .nav-link{
-            font-size: 20px;
-            color: white; 
-        }
-            
-
-
         
+        @keyframes slidein {
+            0% {
+                transform: translateX(150px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+        
+        @keyframes slidein2 {
+            0% {
+                transform: translateX(-150px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+        
+        .nav-link {
+            color: black;
+        }
+        
+        .nav {
+            margin: 20px;
+        }
+        
+        .nav-link:hover,
+        .nav-link:active {
+            color: black;
+            border-bottom: rgb(255, 196, 0) 5px solid;
+            line-height: normal;
+        }
+        
+        .button {
+            border-radius: 50px;
+            background-color: transparent;
+            border: 4px solid rgb(255, 196, 0);
+            font-weight: bold;
+            color: black;
+            top: 40px;
+            width: 50%;
+            height: 2.8rem;
+        }
+        
+        .button:hover {
+            background-color: rgb(255, 196, 0);
+            color: white;
+        }
+        
+        .col-lg-6>img {
+            animation: slidein;
+            animation-duration: 1s;
+            /* content: url('food1.png'); */
+        }
+        /* .col-lg-6>img::before{
+          content: url('food1.png'); 
+        }
+        .col-lg-6>img::after {
+          content: attr('arrow'); 
+        } */
+        .a{
+          content: url("arrow.png");
+        }
+        .bear{
+          content: url('bear.jpg');
+        }
+        
+        .col-lg-5 {
+            animation: slidein2;
+            animation-duration: 0.6s;
+        }
+        
+        .col-lg-1 {
+            position: absolute;
+            top: 300px;
+            right: 10px;
+        }
     </style>
-  </head>
-  <body>
-    
-    <div class="pic">hi</div>
+</head>
+
+<body>
+
+
+
     <nav class="nav bg-transparent text-white">
-        <a class="nav-link" href="#"><img src='flying-honey-bee-icon-1561735545.9008334.png' width="30px"> FoodBee</a>
+        <a class="navbar-brand" href="#"><img src="beee.png" width="100px"></a>
+        <div class="mr-auto"></div>
         <a class="nav-link active" href="#">Home</a>
         <a class="nav-link" href="#">About us</a>
         <a class="nav-link" href="#">Contact</a>
     </nav>
 
+    <div class="container" style="padding: 50px;">
+        <div class="row">
+            <div class="col-lg-5">
+                <p>Let's get some food.</p>
+                <h1>good <span style="color: rgb(255, 196, 0);">food,</span><br>good mood!</h1><br>
+                <p style="font-size: 14px;">With FoodBee Web Guide, you'll get the tasty food that near around the Feng Chia University! How good is that? Some of the restaurant even hide in the alley or unconspicuous, but their food it's definitely tasty and we don't want them
+                    to be forgotten, therefore FoodBee it's here for you. Hope you have a good experience.
+                </p>
+                <br>
+                <button class="button">Find food now!</button>
+            </div>
+            <!-- <div id="arrow" class="col-lg-6" style="background: url('food1.png')"></div> -->
+            <!-- <div class="col-lg-6">
+                <img class="a" src="food1.png" width="600px" style="padding: 50px">
+            </div> -->
+            <div class="a"></div>
+            <div class="col-lg-1">
+                <img type="button" class="arrow" src="arrow.png" width="20px">
+            </div>
+            
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+      $(".arrow").click(function(){
+        $(".a").attr("src")($(".b").attr("src"));
+        
+      });
+
+      $(".arrow").click(function(){
+        $(".a").css("content","url(bear.jpg)")
+      })
+
+
+
+
+
+        // $(function(){
+        //   $("#arrow").click(function(){
+        //     var n = $("#a img").attr("id").substr(2);
+        //     $("#b").attr("src" , "bear" + n + ".jpg");
+        //   }
+        //   );
+        // }
+        // );
+
+
+
+
+
+
+        // function myFunction() {
+        //     x = document.getElementById("a"); // 找到元素
+        //     x.innerHTML = "<img src='arrow.png'><p>大葉多媒</p>"; // 改变内容，注意雙引號內不可再有雙引號，故改用單引號
+        // }
+
+
+        // $("#arrow").click(function() {
+        //     $("#a").attr("src", "http://example.com/someImage.gif");
+        // });
+    </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -64,5 +193,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
     -->
-  </body>
+</body>
+
 </html>
