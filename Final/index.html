@@ -18,9 +18,13 @@
         }
         
         body {
-            background-image: url('1.jpg');
+            max-width: 100vw;
+            margin: 0;
+            background-image: url('back1.jpg');
             background-repeat: no-repeat;
             background-size: cover;
+            overflow-x: hidden;
+            overflow-y: auto
         }
         
         @keyframes slidein {
@@ -67,26 +71,24 @@
             height: 2.8rem;
         }
         
-        .button:hover {
+        .button:hover,
+        .button:active {
             background-color: rgb(255, 196, 0);
             color: white;
         }
         
-        
-        .a{
+        .a {
             animation: slidein;
             animation-duration: 1s;
-            width: 550px;
-            height: 300px;
-            
-
+            width: 480px;
+            height: 330px;
         }
-        .b{
+        
+        .b {
             animation: slidein;
             animation-duration: 1s;
-            width: 450px;
-            height: 400px;
-            padding: 10px;
+            width: 400px;
+            height: 330px;
         }
         /* .col-lg-6>img::before{
           content: url('food1.png'); 
@@ -94,7 +96,6 @@
         .col-lg-6>img::after {
           content: attr('arrow'); 
         } */
-        
         /* .a {
             content: url("food1.png");
             width: 550px;
@@ -103,9 +104,12 @@
             animation-duration: 1s;
         } */
         
+        $custom-gutter-width: 20px;
+        .col {
+            padding-right: 10px;
+        }
         
-        
-        .col-lg-5 {
+        .col-lg-6 {
             animation: slidein2;
             animation-duration: 0.6s;
         }
@@ -114,6 +118,114 @@
             position: absolute;
             top: 300px;
             right: 10px;
+        }
+        
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
+        }
+        
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+        }
+        
+        .textpic {
+            position: relative;
+            padding-bottom: 20px;
+            transform: scale(1);
+            font-weight: bold;
+        }
+        
+        .textpic:hover,
+        .textpic:visited {
+            transform: scale(1.11);
+        }
+        
+        .textpic>a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .textpic>a:hover {
+            color: white;
+        }
+        
+        .textpic>a>h3 {
+            position: absolute;
+            top: 10px;
+            left: 80px;
+        }
+        
+        .textpic>a>p {
+            position: absolute;
+            top: 60px;
+            left: 80px;
+            line-height: 18px;
+        }
+        
+        .cards {
+            display: flex;
+            flex-direction: row;
+            width: 630px;
+            height: 180px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            margin-left: 210px;
+        }
+        
+        
+        .c,
+        .d {
+            width: 530px;
+            height: 180px;
+        }
+        
+        .cards>h3,
+        .cards>p,
+        .cards>div {
+            position: absolute;
+        }
+        
+        .panel {
+            position: absolute;
+            right: 50px;
+            -webkit-transition: all 0.6s ease-in-out;
+            -moz-transition: all 0.6s ease-in-out;
+            -o-transition: all 0.6s ease-in-out;
+            -ms-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+            overflow: hidden;
+            z-index: 2;
+        }
+        
+        #bar1 {
+            z-index: 1000;
+            opacity: 0;
+        }
+        
+        #bar1:target {
+            opacity: 1;
+            z-index: 1000;
+            animation: slidein;
+            animation-duration: 1s;
+            ;
+        }
+        
+        #bar2 {
+            opacity: 0;
+            z-index: -1
+        }
+        
+        #bar2:target {
+            opacity: 1;
+            z-index: 1000;
+            animation: slidein;
+            animation-duration: 1s;
+        }
+        
+        #allfood {
+            width: 1000px;
+            height: 550px;
         }
     </style>
 </head>
@@ -130,25 +242,25 @@
         <a class="nav-link" href="#">Contact</a>
     </nav>
 
-    <div class="container" style="padding: 50px;">
+    <div class="container-fuild" style="padding-left: 80px;padding-top: 80px;">
         <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-6" style="padding-left: 150px;">
                 <p>Let's get some food.</p>
-                <h1>good <span style="color: rgb(255, 196, 0);">food,</span><br>good mood!</h1><br>
-                <p style="font-size: 14px;">With FoodBee Web Guide, you'll get the tasty food that near around the Feng Chia University! How good is that? Some of the restaurant even hide in the alley or unconspicuous, but their food it's definitely tasty and we don't want them
+                <h1 style="font-size: 70px;">good <span style="color: rgb(255, 196, 0);">food,</span><br>good mood!</h1><br>
+                <p style="font-size: 14px; color: rgb(107, 107, 107);">With FoodBee Web Guide, you'll get the tasty food that near around the Feng Chia University! How good is that? Some of the restaurant even hide in the alley or unconspicuous, but their food it's definitely tasty and we don't want them
                     to be forgotten, therefore FoodBee it's here for you. Hope you have a good experience.
                 </p>
                 <br>
-                <button class="button">Find food now!</button>
+                <a href="#bar1"><button  class="button">Find food now!</button></a>
             </div>
-            <div class="col-lg-6">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="col-lg-5" style="padding-left: 80px;">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" style="padding-top: 80px;">
                         <div class="carousel-item active">
                             <img class="a" src="food1.png" class="d-block w-100" alt="">
                         </div>
@@ -170,38 +282,94 @@
                 </div>
 
             </div>
-
-            <!-- <div id="arrow" class="col-lg-6" style="background: url('food1.png')"></div> -->
-            <!-- <div class="col-lg-6">
-                <img id="a" src="food1.png" width="600px" style="padding: 50px">
-            </div>
-            <!-- <div class="a"></div> -->
-            <!-- <div class="col-lg-1">
-                <img type="button" id="arrow" src="arrow.png" width="20px">
-            </div> -->
-
         </div>
+    </div>
+    <div class="container-fuild" style="padding-top: 380px;">
+        <div class="row">
+            <!-- <div class="dcol-lg-5" id="topL">
+                <img src="rec.png">
+            </div> -->
+            <div id="yellowbar" class="col-lg-4">
+                <div id="link-bar1" class="textpic">
+                    <a href="#bar1">
+                        <img src="icon-01.png">
+                        <h3>Restaurant</h3>
+                        <p>Feeling hungry?<br>Let’s find some<br>restaurant with good food.</p>
+                    </a>
+
+                </div>
+                <div id="link-bar2" class="textpic">
+                    <a href="#bar2">
+                        <img src="icon-02.png">
+                        <h3>Desert</h3>
+                        <p>Need some comfort food?<br>Go for some desert.</p>
+                    </a>
+                </div>
+                <div id="link-bar3" class="textpic">
+                    <a href="#bar3">
+                        <img src="icon-03.png">
+                        <h3>Drink</h3>
+                        <p>A drink type? Alway won’t<br>go wrong with a drink.</p>
+                    </a>
+                </div>
+            </div>
+
+            <div id="bar1" class="panel">
+                <div class="cards">
+                    <img src="food2.jpeg">
+                    <h3 style="left: 480px; top: 40px;">南洋廚房</h3>
+                    <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; top: 90px; left: 480px;"></div>
+                    <p style="left: 480px; top:300px">407台中市西屯區逢甲路88號</p>
+                </div>
+                <div class="cards">
+                    <img src="food2.jpeg">
+                    <h3 style="left: 480px; top: 240px;">不言 Humble</h3>
+                    <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; bottom: 150px; left: 480px;"></div>
+                    <p style="left: 480px; top:300px">407台中市西屯區逢甲路88號</p>
+                </div>
+            </div>
+            <div id="bar2" class="panel">
+                <div class="cards">
+                    <img src="food2.jpeg">
+                    <h3 style="left: 480px; top: 40px;">冰火湯圓</h3>
+                    <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; top: 90px; left: 480px;"></div>
+                    <p style="left: 480px; top:300px">407台中市西屯區逢甲路88號</p>
+                </div>
+                <div class="cards">
+                    <img src="food2.jpeg">
+                    <h3 style="left: 480px; top: 240px;">紅髮斑斑</h3>
+                    <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; bottom: 150px; left: 480px;"></div>
+                    <p style="left: 480px; top:300px">407台中市西屯區逢甲路88號</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    
+    
+    </div>
 
 
 
 
 
-        <script>
-            // $(function(){
-            //   $('#a').click(function(){
-            //     $('#a>img').attr({src:'bear.jpg'})
-            //   })
-            // });
-        </script>
+    <script>
+        // $(function(){
+        //   $('#a').click(function(){
+        //     $('#a>img').attr({src:'bear.jpg'})
+        //   })
+        // });
+    </script>
 
-        <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Optional JavaScript; choose one of the two! -->
 
-        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
