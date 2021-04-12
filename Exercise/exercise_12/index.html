@@ -1,53 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exercise_12</title>
     <style>
-        *{
-            border: 1px, black, solid;
-
-        }
-        body{
+        /* * {
+            border: 1px black solid;
+        } */
+        
+        body {
+            width: 100vw;
             min-height: 100vh;
             margin: 0;
             display: grid;
-            grid-template-columns: 0.5fr,2fr,0.5fr;;
-            grid-template-rows:50px,50px,auto,10px,10px;
+            
+            grid-template-columns: auto;
+            grid-template-rows: auto;
         }
-        .header{
+        
+        .header {
             background-color: black;
         }
-        .nav{
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-content: center;
             background-color: chocolate;
+            
         }
-        .container{
-            grid-template-rows:1fr;
-            grid-template-columns: 
+        
+        .container {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 0.7fr 1fr 0.4fr;
+        }
+        .nav2{
+            
+            margin-top:20px;
+            
+            
+        }
+        .nav2>div{
+            border: 1px black solid;
+            background-color: blanchedalmond;
+            padding: 20px;
+            
+        }
+        .one{
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+        }
+        .two{
+            row-gap: 20px;
+            column-gap: 20px;
+            padding: 20px;
+        }
+        .one,.two,.three{
+            display: flex;
+            flex-wrap: wrap;
+            
+            
+        }
+          
+        .cards{
+            border: 1px black solid;
+            display:inline-flex;
+            flex-direction: row;
+            row-gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-evenly;
+            align-content: space-around;
+            width: 163px;
 
 
         }
-        .grey{
+        .center{
+            font-size: xx-large;
+            justify-content: center;
+        }
+       
+        
+        .cards>button{
+            width: 100px;
+        }
+        .grey {
             background-color: gray;
         }
-        .black{
+        
+        .black {
             background-color: black;
         }
-
     </style>
 
 
 </head>
+
 <body>
     <div class="header"></div>
-    
-    <nav class="nav">
-        
-        
-
-    </nav>
+    <div class="nav">
+        <main><a href="#">myshop</a></main>
+        <div class="endd"><a href="#">商品</a></div>
+        <div class="endd"><a href="#">購物車</a></div>
+    </div>
     <div class="container">
         <div class="one">
             <div class="nav2">
@@ -58,15 +124,56 @@
                 <div>新品上市</div>
             </div>
         </div>
-        
-        
+        <div class="two">
+            <div class="cards">
+                <img src="https://i.imgur.com/ZMpETy0b.gif">
+                <div class="end">蛋糕</div>
+                <button type="button">加入購物車</button><br>
+                <div class="center">NT$ 150</div>
+            </div>
+            <div class="cards">
+                <img src="https://i.imgur.com/ODZ7Zpzb.jpg">
+
+                <div class="end">蛋糕</div>
+                <button type="button">加入購物車</button>
+                <div class="center">NT$ 150</div>
+            </div>
+            <div class="cards">
+                <img src="https://i.imgur.com/qT3MWAbb.jpg"><br>
+                <div class="end">蛋糕</div>
+                <button type="button">加入購物車</button><br>
+                <div class="center">NT$ 150</div>
+            </div>
+            <!-- <div class="block"></div> -->
+            <div class="cards">
+                <img src="https://i.imgur.com/2G16qPab.jpg"><br>
+                <div class="end">蛋糕</div>
+                <button type="button">加入購物車</button><br>
+                <div class="center">NT$ 150</div>
+            </div>
+            <div class="cards">
+                <img src="https://i.imgur.com/fziT4jzb.gif"><br>
+                <div class="end">蛋糕</div>
+                <button type="button">加入購物車</button><br>
+                <div class="center">NT$ 150</div>
+            </div>
+            <div class="block"></div>
+            <!-- <div class="block"></div> -->
+        </div>
+        <div class="three"></div>
     </div>
+
+    </div>
+
+
+
     <div class="grey"></div>
     <div class="black"></div>
 
 </body>
 
 
-    
+
 </body>
+
 </html>

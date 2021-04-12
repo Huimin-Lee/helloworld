@@ -23,8 +23,7 @@
             background-image: url('back1.jpg');
             background-repeat: no-repeat;
             background-size: cover;
-            overflow-x: hidden;
-            overflow-y: auto
+            
         }
         
         @keyframes slidein {
@@ -127,6 +126,26 @@
         .carousel-control-next-icon {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
         }
+        /* #block{
+            position: absolute;
+            right: 10px;
+            border-top-left-radius: 100px;
+            background-color: rgb(212, 212, 212, 0.7);
+            width:600px;
+            height:400px;
+            opacity: 0;
+            z-index: -1;
+        }
+        #block:target{
+            position: absolute;
+            right: 10px;
+            border-top-left-radius: 100px;
+            background-color: rgb(212, 212, 212, 0.7);
+            width:600px;
+            height:400px;
+            opacity: 1;
+            z-index: 1000;
+        } */
         
         .textpic {
             position: relative;
@@ -173,17 +192,38 @@
             margin-left: 210px;
         }
         
+        .cards:hover {}
         
-        .c,
-        .d {
-            width: 530px;
-            height: 180px;
+        .cards>img {
+            width: 200px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        
+        .cards>p {
+            color: rgb(97, 97, 97);
         }
         
         .cards>h3,
         .cards>p,
         .cards>div {
             position: absolute;
+        }
+        
+        .button-1 {
+            width: 110px;
+            position: absolute;
+            background-color: rgb(255, 196, 0);
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            color: black;
+            transform: scale(1);
+        }
+        
+        .button-1:hover {
+            color: white;
+            transform: scale(1.1);
         }
         
         .panel {
@@ -223,6 +263,18 @@
             animation-duration: 1s;
         }
         
+        #bar3 {
+            opacity: 0;
+            z-index: -1
+        }
+        
+        #bar3:target {
+            opacity: 1;
+            z-index: 1000;
+            animation: slidein;
+            animation-duration: 1s;
+        }
+        
         #allfood {
             width: 1000px;
             height: 550px;
@@ -238,7 +290,7 @@
         <a class="navbar-brand" href="#"><img src="beee.png" width="100px"></a>
         <div class="mr-auto"></div>
         <a class="nav-link active" href="#">Home</a>
-        <a class="nav-link" href="#">About us</a>
+        <a class="nav-link" href="#block">About us</a>
         <a class="nav-link" href="#">Contact</a>
     </nav>
 
@@ -280,8 +332,19 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-
             </div>
+            <!-- <div id="block" >
+                <h1>About us</h1>
+                <img src="map-02.png" alt="">
+                <p>We are a team that want
+                    students in Feng Chia
+                    search their food faster, 
+                    therefore we creat a website with a selector
+                    that can quickly search various foods with a
+                    button, easily save your time for searching
+                    foods, hope you have a good experience.  
+                </p>
+            </div> -->
         </div>
     </div>
     <div class="container-fuild" style="padding-top: 380px;">
@@ -313,54 +376,85 @@
                     </a>
                 </div>
             </div>
-
-            <div id="bar1" class="panel">
-                <div class="cards">
-                    <img src="food2.jpeg">
-                    <h3 style="left: 480px; top: 40px;">南洋廚房</h3>
-                    <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; top: 90px; left: 480px;"></div>
-                    <p style="left: 480px; top:300px">407台中市西屯區逢甲路88號</p>
-                </div>
-                <div class="cards">
-                    <img src="food2.jpeg">
-                    <h3 style="left: 480px; top: 240px;">不言 Humble</h3>
-                    <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; bottom: 150px; left: 480px;"></div>
-                    <p style="left: 480px; top:300px">407台中市西屯區逢甲路88號</p>
-                </div>
-            </div>
-            <div id="bar2" class="panel">
-                <div class="cards">
-                    <img src="food2.jpeg">
-                    <h3 style="left: 480px; top: 40px;">冰火湯圓</h3>
-                    <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; top: 90px; left: 480px;"></div>
-                    <p style="left: 480px; top:300px">407台中市西屯區逢甲路88號</p>
-                </div>
-                <div class="cards">
-                    <img src="food2.jpeg">
-                    <h3 style="left: 480px; top: 240px;">紅髮斑斑</h3>
-                    <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; bottom: 150px; left: 480px;"></div>
-                    <p style="left: 480px; top:300px">407台中市西屯區逢甲路88號</p>
-                </div>
-            </div>
             
+                <div id="bar1" class="panel">
+                    <div class="cards">
+                        <img src="food1.jpeg">
+                        <h3 style="left: 480px; top: 40px;">南洋廚坊</h3>
+                        <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; top: 90px; left: 480px;"></div>
+                        <p style="left: 480px; top:110px">407台中市西屯區逢甲路88號</p>
+                        <p style="left: 480px; top:130px">Tel:04-24528510</p>
+                        <a href="https://www.facebook.com/betty.0911133750" target="_blank"><button class="button-1" style="top:40px;right:20px">Website</button></a>
+                    </div>
+                    <div class="cards">
+                        <img src="food2.jpg">
+                        <h3 style="left: 480px; top: 250px;">不言 Humble</h3>
+                        <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; bottom: 140px; left: 480px;"></div>
+                        <p style="left: 480px; top:320px">407台中市西屯區逢甲路88號</p>
+                        <p style="left: 480px; bottom:60px">Tel:04-24513458</p>
+                        <a href="https://www.facebook.com/humble.pasta/" target="_blank"><button class="button-1" style="top:250px;right:20px">Website</button></a>
+                    </div>
+                </div>
+                <div id="bar2" class="panel">
+                    <div class="cards">
+                        <img src="food3.jpg">
+                        <h3 style="left: 480px; top: 40px;">御品元冰火湯圓</h3>
+                        <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; top: 90px; left: 480px;"></div>
+                        <p style="left: 480px; top:110px">407台中市西屯區文華路127巷2號</p>
+                        <p style="left: 480px; top:130px">Tel:0920-955058</p>
+                        <a href="https://www.facebook.com/Ice.Fire.Dumpling.Taichung/" target="_blank"><button class="button-1" style="top:40px;right:20px">Website</button></a>
+                    </div>
+                    <div class="cards">
+                        <img src="food4.jpg">
+                        <h3 style="left: 480px; top: 260px;">紅髮斑斑</h3>
+                        <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; bottom: 350px; left: 480px;"></div>
+                        <p style="left: 480px; top:320px">407台中市西屯區逢甲路88號</p>
+                        <p style="left: 480px; bottom:280px">Tel:04-24519956</p>
+                        <a href="https://www.facebook.com/紅髮斑斑-111760266834127/" target="_blank"><button class="button-1" style="top:260px;right:20px">Website</button></a>
+                    </div>
+                    <div class="cards">
+                        <img src="food6.png">
+                        <h3 style="left: 480px; bottom: 140px;">大甲芋頭城</h3>
+                        <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; bottom: 130px; left: 480px;"></div>
+                        <p style="left: 480px; bottom: 75px;px">407台中市西屯區福星路461巷2-2號</p>
+                        <p style="left: 480px; bottom: 55px;">Tel:04-24525817</p>
+                        <a href="https://www.google.com/maps/place/大甲芋頭城/@24.1778169,120.6431697,17z/data=!3m1!4b1!4m5!3m4!1s0x34691622496b9e07:0x61cd0ffc326d8cb2!8m2!3d24.1778169!4d120.6453584?hl=zh-TW" target="_blank">
+                            <button class="button-1" style="bottom:150px;right:20px">Website</button></a>
+                    </div>
+                </div>
+                <div id="bar3" class="panel">
+                    <div class="cards">
+                        <img src="food5.jpg">
+                        <h3 style="left: 480px; top: 40px;">泰奶奶的</h3>
+                        <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; top: 90px; left: 480px;"></div>
+                        <p style="left: 480px; top: 110px;">407台中市西屯區逢甲路20巷43號</p>
+                        <p style="left: 480px; top:130px">Tel:0985-405885</p>
+                        <a href="https://www.google.com/maps/place/泰奶奶的+逢甲店/@24.174631,120.6780782,13z/data=!4m8!1m2!2m1!1z5rOw5aW25aW255qE!3m4!1s0x346917a4c3d7d4b5:0x20992aa6c4aa8ca!8m2!3d24.180117!4d120.64558?hl=zh-TW" target="_blank">
+                            <button class="button-1" style="top:40px;right:20px">Website</button></a>
+                    </div>
+                    <div class="cards">
+                        <img src="food7.jpg">
+                        <h3 style="left: 480px; top: 250px;">京沺屋抹茶專門</h3>
+                        <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; bottom: 140px; left: 480px;"></div>
+                        <p style="left: 480px; top:320px">407台中市西屯區文華路129號</p>
+                        <p style="left: 480px; bottom:60px">Tel:04-24521400</p>
+                        <a href="https://www.facebook.com/京沺屋-抹茶專門-775995739093507/" target="_blank"><button class="button-1" style="top:250px;right:20px">Website</button></a>
+                    </div>
+                
+            </div>
+
         </div>
     </div>
     </div>
-    
-    
+
+
     </div>
 
 
 
 
 
-    <script>
-        // $(function(){
-        //   $('#a').click(function(){
-        //     $('#a>img').attr({src:'bear.jpg'})
-        //   })
-        // });
-    </script>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -374,6 +468,20 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
     -->
+    <script>
+        // $(function(){
+        //   $('#a').click(function(){
+        //     $('#a>img').attr({src:'bear.jpg'})
+        //   })
+        // });
+
+        $(document).ready(function() {
+            $("#about").click(function() {
+                $("#block").fadeIn();
+
+            });
+        });
+    </script>
 </body>
 
 </html>
