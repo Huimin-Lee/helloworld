@@ -13,9 +13,10 @@
 </head>
 
 <body>
-    <p>Hello, world!</p>
-    <button>click</button>
+    <div id="p">If you click on the "Hide" button, I will disappear.</div>
 
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -31,11 +32,13 @@
     -->
     <script>
         $(document).ready(function() {
-            $("button").click(function() {
-                $("p").hide();
+            $("#hide").click(function() {
+                $("#p").hide();
+            });
+            $("#show").click(function() {
+                $("#p").show();
             });
         });
-        
     </script>
 </body>
 
